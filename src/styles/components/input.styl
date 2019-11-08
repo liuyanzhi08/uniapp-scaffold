@@ -1,0 +1,39 @@
+@import './mixins'
+
+.m-checkbox
+  outline none
+  border 0
+  cursor pointer
+  appearance none
+  -webkit-appearance none
+  border-radius 50%
+  width $input-checkbox-size
+  height $input-checkbox-size
+  border m-rem(1px) solid $global-primary-color
+
+  &:checked
+    + .m-checkbox-inner
+      width $input-checkbox-size
+      height $input-checkbox-size
+      background $global-primary-color
+      border-radius $input-checkbox-radius
+
+      &:before, &:after
+        content ' '
+        background white
+        display block
+        position absolute
+
+      &:before
+        width m-rem(5px)
+        height m-rem(2px)
+        transform rotate(45deg)
+        top m-rem(9px)
+        left m-rem(4px)
+
+      &:after
+        width m-rem(8px)
+        height m-rem(2px)
+        transform rotate(-45deg)
+        top m-rem(8px)
+        left m-rem(6px)

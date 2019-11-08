@@ -1,0 +1,11 @@
+@import './mixins'
+
+.m-message
+	padding $global-padding-small $global-padding
+	color $global-thirdly-text-color
+	m-flex()
+	m-flex-left()
+	m-flex-middle()
+
+	&.m-message-error
+		color $global-error-color

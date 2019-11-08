@@ -1,0 +1,48 @@
+@import './mixins'
+@import './mixins'
+
+.m-block
+	background white
+	margin-bottom $global-margin
+	.header
+		m-flex()
+		m-flex-between()
+		m-flex-middle()
+		padding $global-padding-small $global-padding
+
+		.title, .rect-title
+			m-flex()
+			m-flex-middle()
+			white-space nowrap
+		// icon为矩形
+		.rect-title:before
+			content ''
+			width m-rem(6px)
+			height m-rem(13px)
+			background $global-primary-background
+			margin-right $global-margin-small
+		// 无icon或icon为其他图像
+		.title
+			// 标题icon
+			i
+				margin-right $global-margin-small
+		// 标题提示语
+		.text-tip
+			m-set-max-line()
+			flex 1
+			padding-left m-rem(8px)
+			font-size m-rem(12px)
+			color $global-thirdly-text-color
+
+		.more
+			m-flex()
+			m-flex-right()
+			m-flex-middle()
+			padding-left m-rem(8px)
+			white-space nowrap
+			color $global-thirdly-text-color
+			i.icon-arrow-gray-right
+				margin-left m-rem(6px)
+				width m-rem(8px)
+				height m-rem(12px)
+				background-size m-rem(8px) m-rem(12px)

@@ -1,0 +1,19 @@
+@import './mixins'
+
+.m-tab
+	m-flex()
+
+	.m-tab-container
+		flex 1
+		m-flex()
+		m-flex-center()
+		m-flex-middle()
+
+	.m-tab-item
+		color $global-secondary-text-color
+		border-bottom m-rem(2px) solid $global-white-color
+		text-align center
+
+		&.current
+			color $global-primary-color
+			border-color $global-primary-color

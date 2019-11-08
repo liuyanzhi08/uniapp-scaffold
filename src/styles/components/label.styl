@@ -1,0 +1,17 @@
+@import './mixins'
+
+.m-label
+	font-size m-rem(12px)
+	margin-top m-rem(1px)
+	background #ff8765
+	color white
+	padding 0 $global-padding-mini
+	border-radius m-rem(3px)
+	m-flex-inline()
+	m-flex-none()
+	&.b,&.B, &.a,&.a
+		background #ff8765
+	&.s, &.S
+		background #33BBF2
+	&.t, &.T
+		background #88b7e1

@@ -1,0 +1,72 @@
+@import './mixins'
+
+.m-footer
+	position fixed
+	left 0
+	right 0
+	bottom 0
+	width auto
+	z-index $footer-z-index
+	background-color $global-white-color
+
+	&.abs
+		position absolute
+	&.relative
+		position relative
+	.footer-msg
+		m-set-border-top($global-border-inner-color)
+		display flex
+		justify-content flex-start
+		align-items center
+		padding m-rem(8px) $global-padding-medium
+		&.gray
+			color $global-thirdly-text-color
+		.txt
+			margin-left m-rem(8px)
+
+	.actions
+		m-set-border-top($global-border-inner-color)
+		display flex
+		height $global-footer-height
+		font-size m-rem(16px)
+		background-color #fff
+
+	.item
+		as-button()
+		actived-opacity()
+		flex 1
+		display flex
+		align-items center
+		justify-content center
+		height 100%
+		border none
+		-webkit-appearance none
+		text-align center
+		font-size m-rem(16px)
+		font-size m-rem(16px)
+		&.disabled
+			color $global-thirdly-text-color
+
+	/************* 纯色按钮 *************/
+	.item-blue
+		color #fff
+		background $global-primary-color
+	.item-light-blue
+		color #fff
+		background #00bfff
+	.item-gray
+		color #fff
+		background $global-disabled-color
+
+	/************* 渐变色按钮 *************/
+	.item-gradient-blue
+		background linear-gradient(to right, #0082fc 0%, #00b4ff 100%)
+	.item-gradient-gray
+		background linear-gradient(to right, #ccc 0%, #ddd 100%)
+	.item-gradient-orange
+		background linear-gradient(to right, #f05540 0%, #f27d59 100%)
+
+.iphone-x
+	.m-footer
+		padding-bottom constant(safe-area-inset-bottom)
+		padding-bottom env(safe-area-inset-bottom)

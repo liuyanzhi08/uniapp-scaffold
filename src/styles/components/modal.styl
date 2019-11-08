@@ -1,0 +1,48 @@
+@import './mixins.styl'
+
+.m-modal
+  .m-modal-overlay
+    position fixed
+    top 0
+    right 0
+    left 0
+    bottom 0
+    border none
+    background rgba(0, 0, 0, 0.7)
+
+  .m-modal-body
+    display block
+    opacity 1
+    position fixed
+    z-index 999
+    /*transform none
+        transition initial*/
+    position fixed
+    top 0
+    right m-rem(40px)
+    left m-rem(40px)
+    bottom 0
+    m-flex()
+    m-flex-column()
+    m-flex-center()
+    m-flex-middle()
+
+    .m-modal-content
+      width 100%
+      background white
+      color $global-main-text-color
+      font-size $global-font-size-large
+      border-radius m-rem(3px)
+
+      .m-modal-content-title
+        font-size $global-font-size-large-x
+        text-align center
+        margin-top $global-padding-large
+        margin-bottom $global-margin
+      .m-modal-content-main
+        font-size $global-font-size-large
+
+    .m-modal-button
+      color white
+      margin-top m-rem(40px)
+      font-size m-rem(40px)

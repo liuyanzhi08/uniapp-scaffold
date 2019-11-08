@@ -1,0 +1,59 @@
+@import './mixins'
+
+$active_opacity = 0.8
+
+actived-opacity()
+  &:active
+    opacity $active_opacity
+
+as-button()
+  -webkit-tap-highlight-color transparent
+  outline none
+  user-select none
+  cursor pointer
+    border-radius none
+
+/* 改版按钮样式 */
+.m-button
+  //display inline-block
+  box-sizing border-box
+  appearance none
+  text-decoration none
+  text-overflow ellipsis
+  text-align center
+  border 1px solid white
+  height $button-height
+  line-height $button-height
+  font-size m-rem(16px)
+  font-family inherit
+  white-space nowrap
+  as-button()
+  color white
+  border-radius 0
+
+&.m-button-round
+  border-radius m-rem(45px)
+
+&.m-button-primary
+  background $global-primary-background
+  border none
+  actived-opacity()
+  &.disabled, &:disabled
+    color #a1b0c3
+    &:active
+      opacity 1
+
+&.m-button-white
+  background $global-white-color
+  color $global-text-color
+  border 1px solid $global-main-text-color
+  actived-opacity()
+
+&.m-button-medium
+  height $button-height-medium
+  line-height $button-height-medium
+  width $button-width-medium
+
+&.m-button-small
+  height $button-height-small
+  line-height $button-height-small
