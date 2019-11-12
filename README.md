@@ -2,6 +2,9 @@
 
 uniapp 起始框架
 
+## demo
+![demo](https://raw.githubusercontent.com/liuyanzhi08/uniapp-scaffold/master/demo.gif)
+
 ## 安装依赖
 ```
 npm install
