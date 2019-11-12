@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   .content
     text-align center
 </style>

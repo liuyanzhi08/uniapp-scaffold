@@ -1,0 +1,12 @@
+@import '../components/mixins.styl'
+
+m-test-container()
+  m-border(1px, solid, red)
+  m-padding()
+  .title
+    m-color(red)
+    m-margin-bottom-small()
+    word-break break-all
+
+.m-test-container
+  m-test-container()

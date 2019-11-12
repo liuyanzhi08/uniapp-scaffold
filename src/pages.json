@@ -4,13 +4,13 @@
     {
       "path": "pages/test/test",
       "style": {
-        "navigationBarTitleText": "test"
+        "navigationBarTitleText": "示例页面"
       }
     },
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "index"
+        "navigationBarTitleText": "跳转页面"
       }
     }
   ],

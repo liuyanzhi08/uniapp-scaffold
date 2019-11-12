@@ -1,34 +1,63 @@
 <template lang="pug">
   view.content.m-padding
-    button.m-button.m-button-primary(open-type='launchApp', app-parameter='something') 回调APP
+    button.m-button.m-button-primary(
+      open-type='launchApp',
+      app-parameter='something',
+      @error="launchAppError"
+    ) 回调APP
     navigator(url='/pages/index/index', hover-class='navigator-hover')
-      button.m-button.m-button-primary.m-width-100(type='default')
+      button.m-button.m-button-primary.m-width-100
         | 跳转页面
-    button.m-button.m-button-primary.m-width-100(type='primary', open-type='share')
+    button.m-button.m-button-primary.m-width-100(open-type='share')
       | 分享小卡片
-    button(@click='request')
-      | ajax demo
-    div 测试返回数据：{{ ajaxData | json }}
-    rmp-test
-      div store demo
-      div {{ moduleDemoGetter }}
+
+    .m-test-container
+      .title 测试AJAX
+      button.m-button.m-button-primary.m-button-round(@click='request')
+        | 发起请求
+      div.ajax-data(v-if="ajaxData.length")
+        table.m-table
+          thead.thead
+            tr.tr
+              td.td 姓名
+              td.td 薪水
+              td.td 年龄
+          tbody.tbody
+            tr.tr(v-for="(item, index) in ajaxData", v-if="index < 3")
+              td.td {{item.employee_name}}
+              td.td {{item.employee_salary}}
+              td.td {{item.employee_age}}
+
+    component-test
+
+    .m-test-container
+      .title {{ testGetter }}
       div
-        button.m-button.m-button-primary(@click='demoCommit')
-          | store module commit demo
+        button.m-button.m-button-primary.m-button-round(@click='demoCommit')
+          | commit测试
       div
-        button.m-button.m-button-primary(@click='demoAction')
-          | store module action demo
+        button.m-button.m-button-primary.m-button-round(@click='demoAction')
+          | action测试
+
+    .m-test-container
+      .title 测试图标
+      .m-icon.m-icon-ask
+      .m-icon.m-icon-arrow-left
+      .m-icon.m-icon-help
+      .m-icon.m-icon-hide
       .m-icon.m-icon-like
-        .m-label
-          | test
-    img.logo(src='/static/logo.png')
+      .m-icon.m-icon-comment
+      .m-label 标签
+
+    img.logo(src='/static/images/logo.png')
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 import { flattenDeep } from 'lodash-es';
-import rmpTest from '../../components/test/test';
+import componentTest from '../../components/test/test';
 import constants from '../../common/constants';
+import utils from '../../common/utils';
 
 export default {
   data() {
@@ -43,32 +72,41 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'moduleDemoGetter',
+      'testGetter',
     ]),
   },
   components: {
-    rmpTest,
+    componentTest,
   },
   methods: {
-    request() {
-      uni.request({
-        url: 'http://robotdev.gf.com.cn:32003/api/robot/investment/2.0.0/strategy/t0moneyfund', // 仅为示例，并非真实接口地址。
+    launchAppError: (err) => {
+      uni.showToast({
+        icon: 'none',
+        title: err.detail.errMsg,
+      });
+      console.log(err);
+    },
+    async request() {
+      uni.showToast({
+        icon: 'loading',
+        title: '加载中...',
+      });
+      const res = await utils.request({
+        url: 'http://dummy.restapiexample.com/api/v1/employees',
         data: {
           text: 'uni.request',
         },
         header: {
           'custom-header': 'hello', // 自定义请求头信息
         },
-        success: (res) => {
-          this.ajaxData = res.data;
-        },
       });
+      this.ajaxData = res[1].data;
     },
     demoCommit() {
-      this.$store.commit(constants.COMMIT_TEST, 'module state changed via commit');
+      this.$store.commit(constants.C_TEST, '测试VUEX | 通过commit改变');
     },
     demoAction() {
-      this.$store.dispatch(constants.ACTION_TEST, 'module state changed via action');
+      this.$store.dispatch(constants.A_TEST, { id: 1 });
     },
   },
   onShareAppMessage(res) {
@@ -76,16 +114,16 @@ export default {
       console.log(res.target);
     }
     return {
-      title: '贝塔牛小程序-智选基金',
-      desc: '最具人气的小程序开发联盟!',
-      path: '/pages/test/test?id=123',
-      imageUrl: 'https://www.baidu.com/img/bd_logo1.png?where=super',
+      title: 'uni-app小程序',
+      desc: '最好的小程序开发框架!',
+      path: '/pages/test/test',
+      imageUrl: 'https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/gh_33446d7f7a26_430.jpg',
     };
   },
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   .content
     text-align center
     height 300px
@@ -95,10 +133,12 @@ export default {
     width m-rem(100px)
     margin m-rem(10px)
 
-  .title
-    font-size 36px
-    color #8f8f94
+  .ajax-data
+    m-padding-bottom()
 
   .m-button
+    m-margin-bottom()
+
+  .m-test-container
     m-margin-bottom()
 </style>

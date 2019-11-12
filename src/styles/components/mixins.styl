@@ -5,40 +5,40 @@
  ========================================================================== */
 
 m-font-size(size = 10px)
-	if size <= 10px
-		font-size m-rem(12px)
-		transform scale(unit(size/12, ''))
-	else
-		font-size m-rem(size)
+  if size <= 10px
+    font-size m-rem(12px)
+    transform scale(unit(size/ 12, ''))
+  else
+    font-size m-rem(size)
 
 m-font-size-mini()
-	font-size $global-font-size-mini
+  font-size $global-font-size-mini
 
 m-font-size-small()
-	font-size $global-font-size-small
+  font-size $global-font-size-small
 
 m-font-size-medium()
-	font-size $global-font-size-medium
+  font-size $global-font-size-medium
 
 m-font-size-large()
-	font-size $global-font-size-large
+  font-size $global-font-size-large
 
 /* ========================================================================
    height
  ========================================================================== */
 
 m-height()
-	height $global-height
+  height $global-height
 
 m-height-small()
-	height $global-height-small
+  height $global-height-small
 
 /* ========================================================================
  width
 ========================================================================== */
 
 m-width(value = 100%)
-  width value
+  width 100%
 
 /* ========================================================================
    color
@@ -52,323 +52,374 @@ m-color(color = white)
  ================================m========================================== */
 
 m-background(color = white)
-	background-color(color)
+  background-color(color)
 
 m-background-image(image)
-	background-image url($global-img-path + image)
-	background-size 100%
-	background-position center center
-	background-repeat no-repeat
+  background-image url($global-img-path + image)
+  background-size 100%
+  background-position center center
+  background-repeat no-repeat
 
 m-background-banner()
-	background-image linear-gradient(-38deg, #0E46D3 0%, #3473F5 89%)
+  background-image linear-gradient(-38deg, #0E46D3 0%, #3473F5 89%)
 
 /* ========================================================================
    margin
  ========================================================================== */
 
 m-margin-large()
-	margin $global-margin-large
+  margin $global-margin-large
+
 m-margin-top-large()
-	margin-top $global-margin-large
+  margin-top $global-margin-large
+
 m-margin-right-large()
-	margin-right $global-margin-large
+  margin-right $global-margin-large
+
 m-margin-bottom-large()
-	margin-bottom $global-margin-large
+  margin-bottom $global-margin-large
+
 m-margin-left-large()
-	margin-left $global-margin-large
+  margin-left $global-margin-large
+
 m-margin-x-large()
-	margin-left $global-margin-large
-	margin-right $global-margin-large
+  margin-left $global-margin-large
+  margin-right $global-margin-large
+
 m-margin-y-large()
-	margin-top $global-margin-large
-	margin-bottom $global-margin-large
+  margin-top $global-margin-large
+  margin-bottom $global-margin-large
 
 m-margin()
-	margin $global-margin
+  margin $global-margin
+
 m-margin-top()
-	margin-top $global-margin
+  margin-top $global-margin
+
 m-margin-right()
-	margin-right $global-margin
+  margin-right $global-margin
+
 m-margin-bottom()
-	margin-bottom $global-margin
+  margin-bottom $global-margin
+
 m-margin-left()
-	margin-left $global-margin
+  margin-left $global-margin
+
 m-margin-x()
-	margin-left $global-margin
-	margin-right $global-margin
+  margin-left $global-margin
+  margin-right $global-margin
+
 m-margin-y()
-	margin-top $global-margin
-	margin-bottom $global-margin
+  margin-top $global-margin
+  margin-bottom $global-margin
 
 m-margin-small()
-	margin $global-margin-small
+  margin $global-margin-small
+
 m-margin-top-small()
-	margin-top $global-margin-small
+  margin-top $global-margin-small
+
 m-margin-right-small()
-	margin-right $global-margin-small
+  margin-right $global-margin-small
+
 m-margin-bottom-small()
-	margin-bottom $global-margin-small
+  margin-bottom $global-margin-small
+
 m-margin-left-small()
-	margin-left $global-margin-small
+  margin-left $global-margin-small
+
 m-margin-x-small()
-	margin-left $global-margin-small
-	margin-right $global-margin-small
+  margin-left $global-margin-small
+  margin-right $global-margin-small
+
 m-margin-y-small()
-	margin-top $global-margin-small
-	margin-bottom $global-margin-small
+  margin-top $global-margin-small
+  margin-bottom $global-margin-small
 
 m-margin-mini()
-	margin $global-margin-mini
+  margin $global-margin-mini
+
 m-margin-top-mini()
-	margin-top $global-margin-mini
+  margin-top $global-margin-mini
+
 m-margin-right-mini()
-	margin-right $global-margin-mini
+  margin-right $global-margin-mini
+
 m-margin-bottom-mini()
-	margin-bottom $global-margin-mini
+  margin-bottom $global-margin-mini
+
 m-margin-left-mini()
-	margin-left $global-margin-mini
+  margin-left $global-margin-mini
+
 m-margin-x-mini()
-	margin-left $global-margin-mini
-	margin-right $global-margin-mini
+  margin-left $global-margin-mini
+  margin-right $global-margin-mini
+
 m-margin-y-mini()
-	margin-top $global-margin-mini
-	margin-bottom $global-margin-mini
+  margin-top $global-margin-mini
+  margin-bottom $global-margin-mini
 
 /* ========================================================================
    padding
  ========================================================================== */
 
 m-padding()
-	padding $global-padding
+  padding $global-padding
+
 m-padding-top()
-	padding-top $global-padding
+  padding-top $global-padding
+
 m-padding-right()
-	padding-right $global-padding
+  padding-right $global-padding
+
 m-padding-bottom()
-	padding-bottom $global-padding
+  padding-bottom $global-padding
+
 m-padding-left()
-	padding-left $global-padding
+  padding-left $global-padding
+
 m-padding-x()
-	padding-left $global-padding
-	padding-right $global-padding
+  padding-left $global-padding
+  padding-right $global-padding
+
 m-padding-y()
-	padding-top $global-padding
-	padding-bottom $global-padding
+  padding-top $global-padding
+  padding-bottom $global-padding
 
 m-padding-small()
-	padding $global-padding-small
+  padding $global-padding-small
+
 m-padding-top-small()
-	padding-top $global-padding-small
+  padding-top $global-padding-small
+
 m-padding-right-small()
-	padding-right $global-padding-small
+  padding-right $global-padding-small
+
 m-padding-bottom-small()
-	padding-bottom $global-padding-small
+  padding-bottom $global-padding-small
+
 m-padding-left-small()
-	padding-left $global-padding-small
+  padding-left $global-padding-small
+
 m-padding-x-small()
-	padding-left $global-padding-small
-	padding-right $global-padding-small
+  padding-left $global-padding-small
+  padding-right $global-padding-small
+
 m-padding-y-small()
-	padding-top $global-padding-small
-	padding-bottom $global-padding-small
+  padding-top $global-padding-small
+  padding-bottom $global-padding-small
 
 /* ========================================================================
    border
  ========================================================================== */
 
 m-set-border-bottom(color)
-	position relative
-	&:after
-		content ''
-		position absolute
-		left 0
-		bottom 0
-		right auto
-		top auto
-		height 1px
-		width 100%
-		background-color color
-		display block
-		z-index 1
-		-webkit-transform-origin 50% 100%
-		transform-origin 50% 100%
-		@media screen and (-webkit-min-device-pixel-ratio: 2)
-			-webkit-transform scaleY(0.5)
-			transform scaleY(0.5)
+  position relative
+  &:after
+    content ''
+    position absolute
+    left 0
+    bottom 0
+    right auto
+    top auto
+    height 1px
+    width 100%
+    background-color color
+    display block
+    z-index 1
+    -webkit-transform-origin 50% 100%
+    transform-origin 50% 100%
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      -webkit-transform scaleY(0.5)
+      transform scaleY(0.5)
 
 m-set-border-top(color)
-	position relative
-	&:before
-		content ''
-		position absolute
-		left 0
-		top 0
-		bottom auto
-		right auto
-		height 1px
-		width 100%
-		z-index 1
-		background-color color
-		display block
-		-webkit-transform-origin 50% 0
-		transform-origin 50% 0
-		@media screen and (-webkit-min-device-pixel-ratio: 2)
-			-webkit-transform scaleY(0.5)
-			transform scaleY(0.5)
+  position relative
+  &:before
+    content ''
+    position absolute
+    left 0
+    top 0
+    bottom auto
+    right auto
+    height 1px
+    width 100%
+    z-index 1
+    background-color color
+    display block
+    -webkit-transform-origin 50% 0
+    transform-origin 50% 0
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      -webkit-transform scaleY(0.5)
+      transform scaleY(0.5)
 
 //m-set-border-right 不能與 m-set-border-bottom用在同一元素
 m-set-border-right(color)
-	position relative
-	&:after
-		content ''
-		position absolute
-		right 0
-		bottom 0
-		left auto
-		top auto
-		width 1px
-		height 100%
-		background-color color
-		display block
-		z-index 2
-		-webkit-transform-origin 50% 100%
-		transform-origin 50% 100%
-		@media screen and (-webkit-min-device-pixel-ratio: 2)
-			-webkit-transform scaleX(0.5)
-			transform scaleX(0.5)
+  position relative
+  &:after
+    content ''
+    position absolute
+    right 0
+    bottom 0
+    left auto
+    top auto
+    width 1px
+    height 100%
+    background-color color
+    display block
+    z-index 2
+    -webkit-transform-origin 50% 100%
+    transform-origin 50% 100%
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      -webkit-transform scaleX(0.5)
+      transform scaleX(0.5)
 
 //m-set-border-left 不能與 m-set-border-top用在同一元素
 m-set-border-left(color)
-	position relative
-	&:before
-		content ''
-		position absolute
-		right auto
-		bottom auto
-		left 0
-		top 0
-		width 1px
-		height 100%
-		background-color color
-		display block
-		z-index 2
-		-webkit-transform-origin 50% 100%
-		transform-origin 50% 0
-		@media screen and (-webkit-min-device-pixel-ratio: 2)
-			-webkit-transform scaleX(0.5)
-			transform scaleX(0.5)
+  position relative
+  &:before
+    content ''
+    position absolute
+    right auto
+    bottom auto
+    left 0
+    top 0
+    width 1px
+    height 100%
+    background-color color
+    display block
+    z-index 2
+    -webkit-transform-origin 50% 100%
+    transform-origin 50% 0
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      -webkit-transform scaleX(0.5)
+      transform scaleX(0.5)
 
 // 设置0.5px边框，radius单位默认为px，若单位为%则入参值需除以2
 m-set-box-border(color, radius = 0px)
-	position relative
-	&:after
-		content ''
-		position absolute
-		top 0
-		left 0
-		border-radius radius * 2
-		border 1px solid color
-		-webkit-box-sizing border-box
-		box-sizing border-box
-		width 199%	 //部分浏览器右边框显示有问题，缩小比例，不要设置200%
-		height 198%
-		-webkit-transform scale(0.5)
-		transform scale(0.5)
-		-webkit-transform-origin left top
-		transform-origin left top
+  position relative
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    border-radius radius * 2
+    border 1px solid color
+    -webkit-box-sizing border-box
+    box-sizing border-box
+    width 199% //部分浏览器右边框显示有问题，缩小比例，不要设置200%
+    height 198%
+    -webkit-transform scale(0.5)
+    transform scale(0.5)
+    -webkit-transform-origin left top
+    transform-origin left top
 
 m-border-top(color = $global-border-inner-color)
-	m-set-border-top(color)
+  m-set-border-top(color)
 
 m-border-right(color = $global-border-inner-color)
-	m-set-border-right(color)
+  m-set-border-right(color)
 
 m-border-bottom(color = $global-border-inner-color)
-	m-set-border-bottom(color)
+  m-set-border-bottom(color)
 
 m-border-left(color = $global-border-inner-color)
-	m-set-border-left(color)
+  m-set-border-left(color)
 
+m-border(width = 1px, style = solid, color = $global-border-inner-color)
+  border m-rem(width) style color
 
 /* ========================================================================
    flex
  ========================================================================== */
 
 m-flex()
-	display flex
+  display flex
+
 m-flex-inline()
-	display inline-flex
+  display inline-flex
+
 m-flex-left()
-	justify-content flex-start
+  justify-content flex-start
+
 m-flex-center()
-	justify-content center
+  justify-content center
+
 m-flex-right()
-	justify-content flex-end
+  justify-content flex-end
+
 m-flex-between()
-	justify-content space-between
+  justify-content space-between
+
 m-flex-around()
-	justify-content space-around
+  justify-content space-around
 
 m-flex-top()
-	align-items flex-start
+  align-items flex-start
+
 m-flex-middle()
-	align-items center
+  align-items center
+
 m-flex-bottom()
-	align-items flex-end
+  align-items flex-end
+
 m-flex-stretch()
-	align-items stretch
+  align-items stretch
 
 m-flex-1()
-	flex 1
+  flex 1
+
 m-flex-none()
-	flex none
+  flex none
 
 m-flex-row()
-	flex-direction row
+  flex-direction row
+
 m-flex-row-reverse()
-	flex-direction row-reverse
+  flex-direction row-reverse
+
 m-flex-column()
-	flex-direction column
+  flex-direction column
+
 m-flex-column-reverse()
-	flex-direction column-reverse
+  flex-direction column-reverse
 
 /* ========================================================================
    utils
  ========================================================================== */
 
 m-clear-fix()
-	&:after
-		content " "
-		display block
-		height 0
-		clear both
-		visibility hidden
+  &:after
+    content " "
+    display block
+    height 0
+    clear both
+    visibility hidden
 
 // 设置图片背景, 同时指定元素大小
 m-set-image(image, width, height)
-	width m-rem(width)
-	height m-rem(height )
-	background-image url($global-img-path + image)
-	background-repeat no-repeat
-	background-size m-rem(width ) m-rem(height)
+  width m-rem(width)
+  height m-rem(height)
+  background-image url($global-img-path + image)
+  background-repeat no-repeat
+  background-size m-rem(width) m-rem(height)
 
 /* 单行省略 */
 m-nowrap()
-	white-space nowrap
-	overflow hidden
-	text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
 
 /* 设置最多行，超出规定行数，则显示省略号 */
 m-set-max-line($line = 1)
-	display -webkit-box
-	-webkit-box-orient vertical
-	-webkit-line-clamp $line
-	overflow hidden
-	text-overflow ellipsis
+  display -webkit-box
+  -webkit-box-orient vertical
+  -webkit-line-clamp $line
+  overflow hidden
+  text-overflow ellipsis
 
 m-price-color()
-	&.up
-		color $global-price-up
-	&.down
-		color $global-price-down
+  &.up
+    color $global-price-up
+  &.down
+    color $global-price-down

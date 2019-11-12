@@ -1,16 +1,14 @@
 import urls from '../urls/test.url';
+import utils from '../utils';
 
 const rest = {
   /**
-   * 查询基金近一月/一年等收益率，只查询单只产品
-   * @param fundId    基金id
-   * @returns {*}
+   * 查询职员信息(mock)
+   * @param id 职员id
+   * @returns {Promise} 职员信息
    */
   test: id => uni.request({
-    url: urls.test,
-    data: {
-      id,
-    },
+    url: utils.formatUrl(urls.test, { id }),
   }),
 };
 

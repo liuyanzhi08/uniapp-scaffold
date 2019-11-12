@@ -1,26 +1,15 @@
 <template lang="pug">
-  .rmp-test
-    div
-      div.demo {{ demo }}
-      button.m-button.m-button-round.m-button-primary(@click='change')
-      | Action
-      .demo-icons
-        .m-icon.m-icon-ask
-        .m-icon.m-icon-arrow-left
-        .m-icon.m-icon-help
-        .m-icon.m-icon-hide
-        .m-icon.m-icon-like
-        .m-icon.m-icon-comment
-        .m-label test
-
+  .m-test-container
+    div.title {{ title }}
+    button.m-button.m-button-round.m-button-primary(@click='change') 修改标题
 </template>
 
 <script>
 export default {
-  name: 'RmpTest',
+  name: 'ComponentTest',
   data() {
     return {
-      demo: 'demo component',
+      title: '测试自定义组件',
     };
   },
   onLoad() {
@@ -28,19 +17,17 @@ export default {
   },
   methods: {
     change() {
-      this.demo = 'changed via action';
+      this.title = '测试自定义组件 | 修改后';
     },
   },
 };
 </script>
 
-<style lang="stylus" scoped>
-  .rmp-test
-    border m-rem(1px) solid red
-    .demo
-      m-color(red)
-      m-width()
-  .demo-icons
+<style lang="stylus">
+  .test-icons
     m-margin-top-mini()
-    m-width-100()
+    m-width(100%)
+    m-flex()
+    m-flex-center()
+    m-font-size(40px)
 </style>

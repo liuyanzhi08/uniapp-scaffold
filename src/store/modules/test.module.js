@@ -1,12 +1,13 @@
 import test from '../../common/rest/test.rest';
 import constants from '../../common/constants';
+import utils from '../../common/utils';
 
 export default {
   state: {
-    test: 'hello test store',
+    test: '测试VUEX',
   },
   getters: {
-    moduleDemoGetter: state => state.moduleDemo,
+    testGetter: state => state.test,
   },
   mutations: {
     [constants.C_TEST]: (state, value) => {
@@ -14,9 +15,11 @@ export default {
     },
   },
   actions: {
-    [constants.A_TEST]: async ({ commit }, value) => {
-      const res = await test.test(1);
-      commit(constants.C_TEST, res);
+    [constants.A_TEST]: async ({ commit }, { id }) => {
+      const req = test.test(id).then((res) => {
+        commit(constants.C_TEST, JSON.stringify(res[1].data));
+      });
+      utils.showLoading(req);
     },
   },
 };

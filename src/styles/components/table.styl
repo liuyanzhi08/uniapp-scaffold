@@ -1,48 +1,50 @@
 @import './mixins'
 
 .m-table
-	width 100%
+  width 100%
 
-	.tr
-		m-flex()
-		m-flex-between()
-		m-flex-middle()
-		flex-wrap nowrap
-		overflow visible
-		.td
-			text-align left
-			flex 1
-			&:last-child
-				text-align center
-		&.disabled
-			filter grayscale(1)
-			position relative
-			&:before
-				content ' '
-				display block
-				width 100%
-				height 100%
-				position absolute
-				top 0
-				left 0
-				background $global-white-color
-				opacity .5
-				z-index 1
+  .tr
+    m-flex()
+    m-flex-between()
+    m-flex-middle()
+    flex-wrap nowrap
+    overflow visible
+    .td
+      text-align left
+      flex 1
+      &:last-child
+        text-align center
+    &.disabled
+      filter grayscale(1)
+      position relative
+      &:before
+        content ' '
+        display block
+        width 100%
+        height 100%
+        position absolute
+        top 0
+        left 0
+        background $global-white-color
+        opacity .5
+        z-index 1
 
+  .thead
+    .tr
+      background $table-header-cell-color
+      padding $global-padding-mini $global-padding
+      .td
+        font-size $table-header-font-size
+        color $table-header-font-color
 
-	.thead
-		.tr
-			background $table-header-cell-color
-			padding $global-padding-mini $global-padding
-			.td
-				font-size $table-header-font-size
-				color $table-header-font-color
+  .tbody
+    .tr
+      padding $global-padding-small $global-padding
+      .td
+        font-size $table-body-font-size
+        color $table-body-font-color
 
-	.tbody
-		.tr
-			padding $global-padding-small $global-padding
-
-	&.m-table-divider
-		.tbody
-			.tr
-				m-set-border-bottom($global-border-inner-color)
+  &.m-table-divider
+    .tbody
+      .tr
+        m-set-border-bottom($global-border-inner-color)

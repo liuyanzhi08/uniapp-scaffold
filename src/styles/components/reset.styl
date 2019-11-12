@@ -1,2 +1,10 @@
-*
-  box-sizing border-box
+@import './mixins'
+
+page
+  view
+    box-sizing border-box
+    font-size $global-font-size-medium
+
+.m-icon
+  &:before
+   font-size m-rem(50px)
