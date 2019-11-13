@@ -48,4 +48,10 @@ IDE（WebStorm）设置：
  - 打开EditorConfig：WebStorm -> Preferences -> Editor -> Code Style ->
   Editor Config -> Enable EditorConfig Support (.editorconfig文件
   定义了换行符以及缩进符，此配置会覆盖IDE配置)
+  
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2019-present, liuyanzhi08
 
