@@ -4,6 +4,7 @@ uniapp 起始框架
 
 ## demo
 ![demo](https://raw.githubusercontent.com/liuyanzhi08/uniapp-scaffold/master/demo.gif)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuyanzhi08%2Funiapp-scaffold.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuyanzhi08%2Funiapp-scaffold?ref=badge_shield)
 
 ## 安装依赖
 ```
@@ -55,3 +56,6 @@ IDE（WebStorm）设置：
 
 Copyright (c) 2019-present, liuyanzhi08
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuyanzhi08%2Funiapp-scaffold.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuyanzhi08%2Funiapp-scaffold?ref=badge_large)
