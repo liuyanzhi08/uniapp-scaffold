@@ -1,7 +1,6 @@
 {
   "name": "my-project",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start": "npm run dev:mp-weixin",
     "serve": "npm run dev:h5",
