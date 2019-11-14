@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "uniapp-scaffold",
   "version": "0.1.0",
   "scripts": {
     "start": "npm run dev:mp-weixin",
