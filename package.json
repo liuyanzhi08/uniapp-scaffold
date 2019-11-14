@@ -78,6 +78,5 @@
   ],
   "uni-app": {
     "scripts": {}
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
