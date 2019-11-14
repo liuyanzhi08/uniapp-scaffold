@@ -1,6 +1,7 @@
 {
   "name": "uniapp-scaffold",
   "version": "0.1.0",
+  "repository": "git://github.com/liuyanzhi08/uniapp-scaffold.git",
   "scripts": {
     "start": "npm run dev:mp-weixin",
     "serve": "npm run dev:h5",
