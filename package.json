@@ -62,7 +62,7 @@
     "eslint-plugin-vue": "^5.0.0-beta.3",
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-comment": "^2.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-resources-loader": "^2.0.1",
     "style-resources-loader": "^1.2.1",
