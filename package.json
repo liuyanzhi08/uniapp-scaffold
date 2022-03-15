@@ -33,7 +33,7 @@
     "@dcloudio/uni-mp-toutiao": "0.0.352",
     "@dcloudio/uni-mp-weixin": "0.0.973",
     "flyio": "^0.6.2",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "regenerator-runtime": "^0.12.1",
     "stylus-resources-loader": "0.0.4",
     "vue": "^2.6.10",
