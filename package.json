@@ -50,7 +50,7 @@
     "@types/html5plus": "*",
     "@types/uni-app": "^1.4.0",
     "@vue/cli-plugin-babel": "3.5.1",
-    "@vue/cli-service": "^3.11.0",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^9.0.0",
     "babel-plugin-import": "^1.12.1",
     "eslint": "^5.6.0",
